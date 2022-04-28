@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>music recommend</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/f02228b6c8.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Merienda&family=Merriweather:wght@300&family=Playfair+Display&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<style>
+	body {
+		background-image: url(https://images4.alphacoders.com/623/thumb-1920-62364.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	input[type="radio"] {
+		display: none;
+	}
+
+	.box1:hover {
+		background-color: rgb(36, 78, 116);
+		transition-duration: 1s;
+	}
+
+	input[type=radio]:checked+.box1 {
+		background-color: rgb(36, 78, 116);
+		color: white;
+		transition-duration: 1s;
+	}
+
+	.box1 {
+		background-color: rgb(90, 135, 175);
+		padding: 10px 92px 10px 92px;
+		border-radius: 7px;
+		font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	}
+
+	.btn {
+		width: 300px;
+		height: 60px;
+		border-color: rgb(128, 185, 185);
+		background-color: rgb(118, 228, 228);
+	}
+	.btn:hover{
+		background-color: rgb(91, 201, 201);
+	}
+
+	h2 {
+		color: rgb(58, 62, 97);
+		font-family: 'Dancing Script', cursive;
+	}
+	.card {
+		display: inline-flex;
+		margin-right: 5px;
+		font-family: 'League Spartan';
+		border-color: rgb(167, 184, 193);
+	}
+	h5{
+		margin-bottom: 30px;
+		font-size: 25px;
+	}
+	.card-img-top{
+		margin-top: 20px;
+	}
+</style>
+<header>
+	<h2>Emotify <i class="bi bi-headphones"></i></h2>
+	<h5>Your goto partner to vibe with your mood</h5>
+</header>
+
+<body>
+	<form action="{{url_for('emotion_detect')}}" method="POST">
+		<!-- ************ -->
+		<div class="card " style="width: 18rem;">
+			<div class="card-body">
+				<h5 class="card-title">Punjabi</h5>
+				<!-- <h6 class="card-subtitle mb-20 text-muted">Card subtitle</h6> -->
+				<img class="card-img-top" src="../static/punjabi2.jpeg" alt="Card image cap"
+					style="height: 12rem;"><br><br>
+				<label><input type="radio" name="language" value="punjabi" checked="true">
+					<div class="box1">Punjabi</div>
+				</label>
+			</div>
+		</div>
+		<!-- ************ -->
+		<div class="card " style="width: 18rem;">
+			<div class="card-body">
+				<h5 class="card-title">Hindi</h5>
+				<!-- <h6 class="card-subtitle mb-20 text-muted">Card subtitle</h6> -->
+				<img class="card-img-top" src="../static/hindi2.jpeg" alt="Card image cap" style="height: 12rem;"><br>
+				<br>
+				<label><input type="radio" name="language" value="hindi">
+					<div class="box1">Hindi</div>
+				</label>
+			</div>
+		</div>
+		<!-- ******************** -->
+		<div class="card " style="width: 18rem;">
+			<div class="card-body">
+				<h5 class="card-title">English</h5>
+				<!-- <h6 class="card-subtitle mb-20 text-muted">Card subtitle</h6> -->
+				<img class="card-img-top" src="../static/english2.jpeg" alt="Card image cap" style="height: 12rem;"><br>
+
+				<label><input type="radio" name="language" value="english"><br>
+					<div class="box1">English</div>
+				</label>
+			</div>
+		</div>
+		<!-- ******************** -->
+		<div class="card " style="width: 18rem;">
+			<div class="card-body">
+				<h5 class="card-title">Marathi</h5>
+				<!-- <h6 class="card-subtitle mb-20 text-muted">Card subtitle</h6> -->
+				<img class="card-img-top" src="../static/marathi2.jpeg" alt="Card image cap"
+					style="height: 12rem;"><br><br>
+				<label><input type="radio" name="language" value="marathi">
+					<div class="box1">Marathi</div>
+				</label>
+			</div>
+		</div>
+		<!-- ******************** -->
+		<br><br>
+		<input type="submit" name="btn" value="Capture My Emotion" class="btn btn-lg">
+
+	</form>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
