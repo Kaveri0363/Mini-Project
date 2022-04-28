@@ -13,7 +13,7 @@ info = {}
 haarcascade = "haarcascade_frontalface_default.xml"
 label_map = ['Anger', 'Neutral', 'Fear', 'Happy', 'Sad', 'Surprise']
 print("+"*50, "loadin gmmodel")
-model = load_model('model.h5')
+model = load_model('new_mod.h5')
 cascade = cv2.CascadeClassifier(haarcascade)
 
 @app.route('/')
